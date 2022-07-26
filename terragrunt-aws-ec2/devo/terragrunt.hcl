@@ -1,5 +1,6 @@
 terraform {
   source = "tfr:///terraform-aws-modules/ec2-instance/aws?version=4.0.0"
+  #source = "tfr:///terraform-aws-modules/ec2-instance/aws?version=4.1.1"
 }
 
 locals {
@@ -20,7 +21,7 @@ generate "provider" {
   provider "aws" {
     profile = "default"
     region  = "us-east-1"
-    shared_credentials_file = "/home/santosh/terra/credentials"
+    shared_credentials_file = "/home/santosh/.aws/credentials"
   }
 EOF
 }
